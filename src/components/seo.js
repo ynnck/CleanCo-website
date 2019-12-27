@@ -16,9 +16,12 @@ function SEO({ description, lang, meta, title }) {
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
+            compName
+            compDescription
+            authorName
+            authorWebsite
+            compPhone
+            compEmail
           }
         }
       }

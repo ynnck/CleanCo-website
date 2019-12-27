@@ -1,42 +1,46 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { FaPhone, FaEnvelope, FaAngleDoubleDown } from "react-icons/fa"
+import Text from "../components/text"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = ({ compName, compPhone, compEmail }) => (
+  <header>
+    <div className="divHeaderMenu">
+      <h1 className="logo">{compName}</h1>
+      <ul>
+        <li>
+          <FaPhone className="awesomeLogo" />
+          <span />
+          {compPhone}
+        </li>
+        <li>
+          <FaEnvelope className="awesomeLogo" />
+          <span />
+          {compEmail}
+        </li>
+      </ul>
     </div>
+    <Text />
+    <a href="#contactForm">
+      <div className="navigate">
+        <h2>Vraag gratis offerte aan</h2>
+        <FaAngleDoubleDown className="arrowNavigate" />
+      </div>
+    </a>
   </header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  compName: PropTypes.string,
+  compEmail: PropTypes.string,
+  compPhone: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  compName: ``,
+  compPhone: "",
+  compEmail: "",
 }
 
 export default Header
