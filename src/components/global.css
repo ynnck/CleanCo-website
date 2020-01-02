@@ -1,6 +1,53 @@
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
+.divText {
+  width: 90vw;
+}
+.divIcons,
+.divKolom, 
+.divHeaderMenu{
+flex-direction: column;
+}
+.divTextContact {
+  width: 90vw;
+}
+footer{
+flex-direction: column;
+padding: 5vh 0 0 0;
+align-items: center;
+}
+}
+@media only screen and (max-width: 800px) and (min-width: 600px){
+.divText {
+  width: 60vw;
+  align-self: flex-end;
+}
+.divIcons { flex-wrap: wrap;}
+.divIconItem { flex: 1 1 50%;}
+.divKolom, 
+.divHeaderMenu{
+flex-direction: column;
+}
+.divTextContact {
+  width: 90vw;
+}
+footer{
+flex-direction: column;
+padding: 5vh 0 0 0;
+align-items: center;
+}
 }
 @media only screen and (min-width: 800px) {
+.divText {
+  width: 40vw;
+  align-self: flex-end;
+}
+header {
+height: 100vh;
+}
+.divTextContact {
+  width: 30vw;
+}
+footer{padding: 5vh 0 0 5vh;}
 }
 html {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -16,17 +63,27 @@ html {
   display: flex;
   flex-direction: column;
 }
+.divKolom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
 h1,
 h2,
 h3 {
   font-family: var(--main-font-highlight);
+}
+.titelPijl {
+text-align: center;
 }
 header {
   background-image: url(../images/achtergrond_appelblauw_mirror.jpeg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  height: 100vh;
+  
   padding: 5vh 5vw 5vh 5vw;
   display: flex;
   flex-direction: column;
@@ -69,14 +126,34 @@ span {
   display: flex;
   justify-content: center;
 }
+.divIcons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+.divIconItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.awesomeIcon {
+  font-size: 3vh;
+}
 .divText {
-  width: 40vw;
+
   margin-right: 7vw;
   margin-top: auto;
   margin-bottom: auto;
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  
+  text-align: justify;
+}
+.divTextContact {
+  display: flex;
+  flex-direction: column;
+  color: var(--main-color-form);
+  text-align: justify;
 }
 .navigate {
   color: var(--main-color-header);
@@ -100,7 +177,6 @@ span {
   display: flex;
   flex-direction: column;
   align-self: center;
-  margin: 10vh 10vw 10vh 10vw;
 }
 header h2,
 header h3 {
@@ -146,7 +222,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   background-color: #5eb9b4;
-  padding: 5vh 0 0 5vh;
+  
   color: var(--main-color-header);
 }
 footer .name {

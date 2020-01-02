@@ -24,7 +24,7 @@ const Header = ({ compName, compPhone, compEmail }) => (
     <Text />
     <a href="#contactForm">
       <div className="navigate">
-        <h2>Vraag gratis offerte aan</h2>
+        <h2 className="titelPijl">Meer informatie en offerteaanvraag</h2>
         <FaAngleDoubleDown className="arrowNavigate" />
       </div>
     </a>
