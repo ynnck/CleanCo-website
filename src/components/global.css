@@ -1,53 +1,59 @@
 @media only screen and (max-width: 600px) {
-.divText {
-  width: 90vw;
+  .divText {
+    width: 90vw;
+  }
+  .divIcons,
+  .divKolom,
+  .divHeaderMenu {
+    flex-direction: column;
+  }
+  .divTextContact {
+    width: 90vw;
+  }
+  footer {
+    flex-direction: column;
+    padding: 5vh 0 0 0;
+    align-items: center;
+  }
 }
-.divIcons,
-.divKolom, 
-.divHeaderMenu{
-flex-direction: column;
-}
-.divTextContact {
-  width: 90vw;
-}
-footer{
-flex-direction: column;
-padding: 5vh 0 0 0;
-align-items: center;
-}
-}
-@media only screen and (max-width: 800px) and (min-width: 600px){
-.divText {
-  width: 60vw;
-  align-self: flex-end;
-}
-.divIcons { flex-wrap: wrap;}
-.divIconItem { flex: 1 1 50%;}
-.divKolom, 
-.divHeaderMenu{
-flex-direction: column;
-}
-.divTextContact {
-  width: 90vw;
-}
-footer{
-flex-direction: column;
-padding: 5vh 0 0 0;
-align-items: center;
-}
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+  .divText {
+    width: 60vw;
+    align-self: flex-end;
+  }
+  .divIcons {
+    flex-wrap: wrap;
+  }
+  .divIconItem {
+    flex: 1 1 50%;
+  }
+  .divKolom,
+  .divHeaderMenu {
+    flex-direction: column;
+  }
+  .divTextContact {
+    width: 90vw;
+  }
+  footer {
+    flex-direction: column;
+    padding: 5vh 0 0 0;
+    align-items: center;
+  }
 }
 @media only screen and (min-width: 800px) {
-.divText {
-  width: 40vw;
-  align-self: flex-end;
-}
-header {
-height: 100vh;
-}
-.divTextContact {
-  width: 30vw;
-}
-footer{padding: 5vh 0 0 5vh;}
+  .divText {
+    width: 40vw;
+    align-self: flex-end;
+  }
+  header {
+    height: 100vh;
+  }
+  .divTextContact {
+    width: 30vw;
+  }
+  footer {
+    padding: 5vh 0 0 5vh;
+  }
 }
 html {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -76,14 +82,14 @@ h3 {
   font-family: var(--main-font-highlight);
 }
 .titelPijl {
-text-align: center;
+  text-align: center;
 }
 header {
   background-image: url(../images/achtergrond_appelblauw_mirror.jpeg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  
+
   padding: 5vh 5vw 5vh 5vw;
   display: flex;
   flex-direction: column;
@@ -140,13 +146,12 @@ span {
   font-size: 3vh;
 }
 .divText {
-
   margin-right: 7vw;
   margin-top: auto;
   margin-bottom: auto;
   display: flex;
   flex-direction: column;
-  
+
   text-align: justify;
 }
 .divTextContact {
@@ -222,7 +227,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   background-color: #5eb9b4;
-  
+
   color: var(--main-color-header);
 }
 footer .name {
@@ -256,6 +261,15 @@ a:hover,
 a:visited,
 a:active {
   text-decoration: none;
+}
+.honingveld {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
 }
 footer a,
 footer a:hover,

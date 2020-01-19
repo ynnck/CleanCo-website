@@ -5,13 +5,22 @@ import PropTypes from "prop-types"
 const ContactForm = () => {
   const [naam, setNaam] = useState("")
   const [telefoon, setTelefoon] = useState("")
-  const [email, setEmail] = useState("")
+  const [memo, setMemo] = useState("")
   const [details, setDetails] = useState("")
   const [status, setStatus] = useState("")
+  const [spamcheck, setSpamcheck] = useState("")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
 
   const handleSubmit = ev => {
     ev.preventDefault()
-    if (naam != "" && email != "" && details != "") {
+    if (
+      naam != "" &&
+      memo != "" &&
+      details != "" &&
+      name == "" &&
+      email == ""
+    ) {
       const form = ev.target
       const data = new FormData(form)
       const xhr = new XMLHttpRequest()
@@ -23,7 +32,7 @@ const ContactForm = () => {
         if (xhr.status === 200) {
           setNaam("")
           setTelefoon("")
-          setEmail("")
+          setMemo("")
           setDetails("")
           setStatus("SUCCESS")
         } else {
@@ -37,6 +46,9 @@ const ContactForm = () => {
   }
   const handleChange = e => {
     switch (e.target.name) {
+      case "spamcheck":
+        setSpamcheck(e.target.value)
+        break
       case "naam":
         setNaam(e.target.value)
         break
@@ -44,10 +56,16 @@ const ContactForm = () => {
         setTelefoon(e.target.value)
         break
       case "_replyto":
-        setEmail(e.target.value)
+        setMemo(e.target.value)
         break
       case "details":
         setDetails(e.target.value)
+        break
+      case "email":
+        setEmail(e.target.value)
+        break
+      case "name":
+        setName(e.target.value)
         break
     }
   }
@@ -62,6 +80,24 @@ const ContactForm = () => {
         action="https://formspree.io/mayqakqe"
         method="POST"
       >
+        <label class="honingveld" for="name"></label>
+        <input
+          class="honingveld"
+          autocomplete="off"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name here"
+        />
+        <label class="honingveld" for="email"></label>
+        <input
+          class="honingveld"
+          autocomplete="off"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your e-mail here"
+        />
         <label htmlFor="naam">Naam</label>
         <input type="text" value={naam} name="naam" onChange={handleChange} />
         <label htmlFor="telefoon">Telefoon</label>
@@ -74,7 +110,7 @@ const ContactForm = () => {
         <label htmlFor="_replyto">E-mail</label>
         <input
           type="email"
-          value={email}
+          value={memo}
           name="_replyto"
           onChange={handleChange}
         />
