@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { ReCaptcha } from "react-recaptcha-v3"
 
 const ContactForm = () => {
   const [naam, setNaam] = useState("")
@@ -12,14 +13,19 @@ const ContactForm = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
 
+  const verifyCallback = recaptchaToken => {
+    // Here you will get the final recaptchaToken!!!
+    console.log(recaptchaToken, "<= your recaptcha token")
+  }
+
   const handleSubmit = ev => {
     ev.preventDefault()
     if (
       naam != "" &&
       memo != "" &&
       details != "" &&
-      name == "" &&
-      email == ""
+      name === "" &&
+      email === ""
     ) {
       const form = ev.target
       const data = new FormData(form)
@@ -88,6 +94,8 @@ const ContactForm = () => {
           id="name"
           name="name"
           placeholder="Your name here"
+          value={name}
+          onChange={handleChange}
         />
         <label class="honingveld" for="email"></label>
         <input
@@ -96,6 +104,8 @@ const ContactForm = () => {
           type="email"
           id="email"
           name="email"
+          value={email}
+          onChange={handleChange}
           placeholder="Your e-mail here"
         />
         <label htmlFor="naam">Naam</label>
@@ -116,6 +126,12 @@ const ContactForm = () => {
         />
         <label htmlFor="details">Details</label>
         <textarea value={details} name="details" onChange={handleChange} />
+        <ReCaptcha
+          sitekey="6LcJd9IUAAAAAPqfw3WwDsOuoWouT96_UYn7WVL-"
+          action="contactform"
+          verifyCallback={verifyCallback}
+        />
+
         {status === "SUCCESS" ? (
           <p className="statusMessage">
             Thank you! Your message has been sent. We will get in touch as soon

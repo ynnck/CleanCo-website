@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
@@ -9,14 +9,22 @@ import TextContact from "../components/textContact"
 import ContactForm from "../components/contactform"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <div className="divKolom">
-      <TextContact />
-      <ContactForm />
-    </div>
-  </Layout>
-)
+import { loadReCaptcha } from "react-recaptcha-v3"
+
+const IndexPage = () => {
+  useEffect(() => {
+    loadReCaptcha("6LcJd9IUAAAAAPqfw3WwDsOuoWouT96_UYn7WVL-")
+  })
+
+  return (
+    <Layout>
+      <div className="divKolom">
+        <TextContact />
+        <ContactForm />
+      </div>
+    </Layout>
+  )
+}
 IndexPage.propTypes = {
   compName: PropTypes.string,
 }
