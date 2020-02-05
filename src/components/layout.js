@@ -8,12 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { FaPhone, FaEnvelope, FaRegCopyright, FaRegBell } from "react-icons/fa"
 import Header from "./header"
-import Footer from "./footer"
-
-import Image from "../images/achtergrond_roos.jpeg"
-
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -21,12 +17,14 @@ const Layout = ({ children }) => {
     query SiteTitleQuery {
       site {
         siteMetadata {
-          compName
-          compDescription
-          authorName
-          authorWebsite
-          compPhone
-          compEmail
+          title
+          description
+          email
+          telephone
+          author {
+            name
+            website
+          }
         }
       }
     }
@@ -34,23 +32,39 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header
-        compName={data.site.siteMetadata.compName}
-        compPhone={data.site.siteMetadata.compPhone}
-        compEmail={data.site.siteMetadata.compEmail}
+      <Header siteTitle={data.site.siteMetadata.title} 
+              email={data.site.siteMetadata.email} 
+              telephone={data.site.siteMetadata.telephone}
       />
-      <div className="divContainer">
-        {children}
-        <Footer
-          compName={data.site.siteMetadata.compName}
-          compTitle={data.site.siteMetadata.compName}
-          compDescription={data.site.siteMetadata.compDescription}
-          compPhone={data.site.siteMetadata.compPhone}
-          compEmail={data.site.siteMetadata.compEmail}
-          authorName={data.site.siteMetadata.authorName}
-          authorWebsite={data.site.siteMetadata.authorWebsite}
-        />
-      </div>
+        <main>{children}</main>
+        <footer style={{height: '15vh', display: 'flex', flexWrap: 'wrap', backgroundColor: 'rgb(94, 185, 180)', color: 'white'}}>
+          <div style={{display: 'flex'}}>
+            <div style={{height: '11vh', width: '50vw', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
+              <div style={{fontSize: '2rem', color: 'white'}}>{data.site.siteMetadata.title}</div> 
+              <div style={{fontSize: '2rem', color: 'white', marginTop: '5px'}}>{data.site.siteMetadata.description}</div>
+            </div>
+            <div style={{height: '11vh', width: '50vw', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
+              <h2 style={{marginBottom: '5px'}}>Contact</h2>
+                <div>
+                  <div style={{display: 'flex', alignItems: 'center'}}>                  
+                    <FaPhone />
+                    <div style={{marginLeft: '6px'}}>{data.site.siteMetadata.telephone}</div>
+                    
+                  </div>
+                  <div style={{display: 'flex', alignItems: 'center'}}>
+                    <FaEnvelope />
+                    <div style={{marginLeft: '6px'}}>{data.site.siteMetadata.email}</div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div className="copyright" style={{fontSize: '1,2rem'}}>
+              <FaRegCopyright />
+  {' '}{new Date().getFullYear()}
+              {' '}
+              <a style={{color: 'white', textDecoration: 'none'}} href={data.site.siteMetadata.author.website}>{data.site.siteMetadata.author.name}</a>
+            </div>
+            </footer>
     </>
   )
 }

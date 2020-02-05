@@ -1,11 +1,14 @@
 module.exports = {
   siteMetadata: {
-    compName: `Clean&Co`,
-    compDescription: `schoonmaakservice`,
-    authorName: `re:root`,
-    authorWebsite: "www.reroot.be",
-    compPhone: "+32 477 705 210",
-    compEmail: "info@clean-co.be",
+    title: `Clean&co`,
+    description: `Schoonmaakbedrijf`,
+    author: {
+      name: 're:root',
+      website: 'www.reroot.be'
+    }, 
+    telephone: '+32 477 705 210',
+    email: 'info@clean-co.be',
+    formspree: 'https://formspree.io/mayqakqe'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,17 +29,16 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        // This path is relative to the root of the site.
+        display: `minimal-ui`
       },
     },
     {
-      resolve: "gatsby-plugin-google-fonts",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: ["Playfair Display", "Inria Serif", "Poppins", "Dancing Script"],
         display: "swap",
       },
-    },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
