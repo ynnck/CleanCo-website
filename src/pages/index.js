@@ -33,6 +33,7 @@ const IndexPage = () => (
         </p>
         </div>
       <div className="containerContactForm" style={{margin: '5vw', display: 'flex', flexDirection: 'column'}}>
+        <a name='contactForm'/>
         <h2 style={{height: '5vh', color: 'rgb(94, 185, 180)'}}>Vraag vrijblijvend een offerte aan</h2>
         <ContactForm />
       </div>

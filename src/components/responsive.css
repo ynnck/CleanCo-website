@@ -72,10 +72,9 @@ footer{
      footer{
          flex-direction: row;
          justify-content: space-between;
-         color: brown;
      }
      .containerPaginaFoto{
-        height: 120vh;
+        height: 140vh;
     }
      
  }

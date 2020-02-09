@@ -61,6 +61,12 @@ const BackgroundSection = ({ className }) => (
               <h3>Flexibel</h3>
             </div>
           </div>
+          <div style={{alignSelf: 'flex-end', display: 'flex',flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', height: '15vh'}}>
+            <a href="#contactForm" style={{textDecoration: 'none', color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end'}}>
+              <h3 style={{marginBottom: '10px'}}>Meer informatie en offerteaanvraag</h3>
+              <FaAngleDoubleDown style={styleIcon} />
+            </a>
+          </div>
         </div>
         </BackgroundImage>
       )
