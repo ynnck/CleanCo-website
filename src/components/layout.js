@@ -10,7 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { FaPhone, FaEnvelope, FaRegCopyright, FaRegBell } from "react-icons/fa"
 import Header from "./header"
-import "./layout.css"
+import "./layout.css" 
+import "./responsive.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -37,13 +38,12 @@ const Layout = ({ children }) => {
               telephone={data.site.siteMetadata.telephone}
       />
         <main>{children}</main>
-        <footer style={{height: '15vh', display: 'flex', flexWrap: 'wrap', backgroundColor: 'rgb(94, 185, 180)', color: 'white'}}>
-          <div style={{display: 'flex'}}>
-            <div style={{height: '11vh', width: '50vw', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
+        <footer style={{display: 'flex', flexWrap: 'wrap',justifyContent: 'center', backgroundColor: 'rgb(94, 185, 180)', color: 'white', padding: '10px'}}>
+            <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
               <div style={{fontSize: '2rem', color: 'white'}}>{data.site.siteMetadata.title}</div> 
               <div style={{fontSize: '2rem', color: 'white', marginTop: '5px'}}>{data.site.siteMetadata.description}</div>
             </div>
-            <div style={{height: '11vh', width: '50vw', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
+            <div style={{height: '11vh', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
               <h2 style={{marginBottom: '5px'}}>Contact</h2>
                 <div>
                   <div style={{display: 'flex', alignItems: 'center'}}>                  
@@ -57,10 +57,9 @@ const Layout = ({ children }) => {
                   </div>
                 </div>
             </div>
-            </div>
-            <div className="copyright" style={{fontSize: '1,2rem'}}>
+            <div className="copyright" style={{fontSize: '1,2rem', width: '100%'}}>
               <FaRegCopyright />
-  {' '}{new Date().getFullYear()}
+              {' '}{new Date().getFullYear()}
               {' '}
               <a style={{color: 'white', textDecoration: 'none'}} href={data.site.siteMetadata.author.website}>{data.site.siteMetadata.author.name}</a>
             </div>

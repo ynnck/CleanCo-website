@@ -1,13 +1,24 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
 const ContactForm = ( ) => {
+
   const [name, setName] = useState("")
   const [organization, setOrganization] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [status, setStatus] = useState("")
+  const query = useStaticQuery(graphql`
+  query SiteFormspreeQuery {
+    site {
+      siteMetadata {
+          formspree
+      }
+    }
+  }
+`)
 
   const handleSubmit = ev => {
     ev.preventDefault()
@@ -51,7 +62,7 @@ const ContactForm = ( ) => {
     <form
       id="contactForm"
       onSubmit={handleSubmit}
-      action="https://formspree.io/xgeoazgj"
+      action={query.site.siteMetadata.formspree}
       method="POST"
       style={{display: 'flex', flexDirection: 'column', width: '100%', color: 'rgb(94, 185, 180)'}}
     >

@@ -1,0 +1,90 @@
+header {
+    display: flex;
+    flex-wrap:  wrap;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    padding-top: 2vw;
+    position: absolute;
+    width: 100vw;
+    height: 15vh;
+    z-index: 1;
+    color: white;
+}
+.containerPaginaWit{
+    display: flex;
+    flex-direction: column;
+}
+.textOpAchtergrond{
+    position: absolute; 
+    overflow: hidden;
+    top: 35vh;
+    left: 5vw;
+    width: 90vw;
+    color: white; 
+    background: rgb(255,255,255,0); 
+    text-Align: justify;   
+}
+.icoon {
+    display: flex;
+    flex-direction: column;
+    justify-Content: center;
+    align-items: center;
+    width: 50%;
+}
+.containerPaginaFoto{
+    height: 120vh;
+}  
+footer{
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+@media only screen and (min-width: 700px) {
+    header, 
+    header > div{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+ @media only screen and (min-width: 700px) {
+
+     .textOpAchtergrond{
+        width: 55vw;
+        left: 40vw;
+     }
+     .containerPaginaWit{
+         flex-direction: row;
+     }
+     .textOpWit{
+         width: 50vw;
+         padding: 6vw;
+     }
+     .containerContactForm{
+         width: 50vw;
+     }
+     footer > div {
+         width: 50%;
+     }
+     footer{
+         flex-direction: row;
+         justify-content: space-between;
+         color: brown;
+     }
+     .containerPaginaFoto{
+        height: 120vh;
+    }
+     
+ }
+ @media only screen and (min-width: 1250px){
+     .icoon{
+         width: 25%;    
+     }
+     .containerPaginaFoto{
+        height: 100vh;
+    }
+
+ }
