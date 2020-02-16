@@ -1,7 +1,6 @@
 header {
     display: flex;
-    flex-wrap:  wrap;
-    flex-direction: row;
+    flex-direction: column;
     align-self: center;
     justify-content: center;
     align-items: center;
@@ -9,7 +8,7 @@ header {
     padding-top: 2vw;
     position: absolute;
     width: 100vw;
-    height: 15vh;
+    height: 25vh;
     z-index: 1;
     color: white;
 }
@@ -18,14 +17,13 @@ header {
     flex-direction: column;
 }
 .textOpAchtergrond{
-    position: absolute; 
-    overflow: hidden;
-    top: 35vh;
-    left: 5vw;
-    width: 90vw;
+    width: 100vw;
     color: white; 
-    background: rgb(255,255,255,0); 
+    background-color: rgb(94, 185, 180); 
     text-Align: justify;   
+    padding-top: 25vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 .icoon {
     display: flex;
@@ -35,7 +33,7 @@ header {
     width: 50%;
 }
 .containerPaginaFoto{
-    height: 120vh;
+    min-height: 100vh;
 }  
 footer{
     width: 100vw;
@@ -43,18 +41,18 @@ footer{
     align-items: center;
     padding: 10px;
 }
-@media only screen and (min-width: 700px) {
+ @media only screen and (min-width: 1000px) {
     header, 
     header > div{
         flex-direction: row;
         justify-content: space-between;
     }
-}
- @media only screen and (min-width: 700px) {
-
      .textOpAchtergrond{
-        width: 55vw;
-        left: 40vw;
+        width: 90vw;
+        padding-top: 35vh;
+        padding-left: 45vw;
+        padding-bottom: 5vh;
+        background: none;
      }
      .containerPaginaWit{
          flex-direction: row;
@@ -73,17 +71,10 @@ footer{
          flex-direction: row;
          justify-content: space-between;
      }
-     .containerPaginaFoto{
-        height: 140vh;
-    }
      
  }
  @media only screen and (min-width: 1250px){
      .icoon{
          width: 25%;    
      }
-     .containerPaginaFoto{
-        height: 100vh;
-    }
-
  }

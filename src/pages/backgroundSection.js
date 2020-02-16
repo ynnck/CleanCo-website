@@ -11,7 +11,7 @@ const BackgroundSection = ({ className }) => (
       query {
         desktop: file(relativePath: { eq: "achtergrond_appelblauw_mirror.jpeg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1920, maxHeight: 1080) {
+            fluid(quality: 100, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -42,7 +42,7 @@ const BackgroundSection = ({ className }) => (
             Met meer dan 20 jaar ervaring in de sector staat Clean&Co dan ook garant voor tevreden cliënten. 
             Op aanvraag bieden wij een lijst van onze referenties.</p>
           <p>Aarzel zeker niet om gratis een vrijblijvende offerte aan te vragen.</p>
-          <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', marginTop: '5vh'}}>
+          <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', marginTop: '5vh', marginBottom: '5vh'}}>
             <div className="icoon">
               <FaBookOpen style={styleIcon}/>
               <h3>Ervaren</h3>
