@@ -8,7 +8,7 @@ module.exports = {
     }, 
     telephone: '+32 477 705 210',
     email: 'info@clean-co.be',
-    formspree: 'https://formspree.io/mayqakqe'
+    formspree: 'https://kwes.io/api/foreign/forms/G0sw7qLJ0ZIz0RbD4EPV'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -71,7 +71,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script src="https://kwes.io/js/kwes.js"></script>
+    </Helmet>
   )
 }
 
