@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Clean&co`,
+    title: `Kathari`,
     description: `Schoonmaakbedrijf`,
     author: {
       name: 're:root',
       website: 'www.reroot.be'
     }, 
     telephone: '+32 477 705 210',
-    email: 'info@clean-co.be',
+    email: 'info@kathari.be',
     formspree: 'https://kwes.io/api/foreign/forms/G0sw7qLJ0ZIz0RbD4EPV'
   },
   plugins: [

@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
               email={data.site.siteMetadata.email} 
               telephone={data.site.siteMetadata.telephone}
       />
-        <main>{children}</main>
+        <main siteTitle={data.site.siteMetadata.title}>{children}</main>
         <footer style={{display: 'flex', flexWrap: 'wrap',justifyContent: 'center', backgroundColor: 'rgb(94, 185, 180)', color: 'white', padding: '10px'}}>
             <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
               <div style={{fontSize: '2rem', color: 'white'}}>{data.site.siteMetadata.title}</div> 

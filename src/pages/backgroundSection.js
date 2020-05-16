@@ -34,12 +34,12 @@ const BackgroundSection = ({ className }) => (
           backgroundColor={`#040e18`}
         >
           <div className='textOpAchtergrond'>
-          <p>Clean&Co is een groeiend en dynamisch bedrijf met oog voor kwaliteit. 
+          <p>Kathari is een groeiend en dynamisch bedrijf met oog voor kwaliteit. 
             Onze diensten zijn toegespitst op diverse professionele activiteiten, met een focus op de medische sector.</p>
           <p>Wij bieden een hoogwaardige schoonmaakservice aan en maken daarbij steeds gebruik van kwaliteitsvolle producten.
             Betrouwbaarheid en stiptheid dragen wij hoog in het vaandel. 
             Daarom kunnen wij u een onberispelijke kwaliteit verzekeren. 
-            Met meer dan 20 jaar ervaring in de sector staat Clean&Co dan ook garant voor tevreden cliënten. 
+            Met meer dan 20 jaar ervaring in de sector staat Kathari  dan ook garant voor tevreden cliënten. 
             Op aanvraag bieden wij een lijst van onze referenties.</p>
           <p>Aarzel zeker niet om gratis een vrijblijvende offerte aan te vragen.</p>
           <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', marginTop: '5vh', marginBottom: '5vh'}}>
