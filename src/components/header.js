@@ -1,10 +1,11 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { FaPhone, FaEnvelope} from "react-icons/fa"
+import logo from "../images/kathari_wit.png"
 
-const Header = ({ siteTitle, telephone, email }) => (
+const Header = ({ telephone, email }) => (
   <header>
-  <h1 style={{fontFamily: 'Playfair Display'}}>{siteTitle}</h1>
+  <img src={logo} style={{width: '6in', height: '1in'}}/>
   <div style={{display: 'flex', flexDirection: 'column'}}>
     <div style={{display: 'flex',
                  alignItems: 'center',
