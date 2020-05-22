@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { FaPhone, FaEnvelope, FaRegCopyright, FaRegBell } from "react-icons/fa"
+import { FaPhone, FaEnvelope, FaRegCopyright} from "react-icons/fa"
 import Header from "./header"
 import "./layout.css" 
 import "./responsive.css"
@@ -33,11 +33,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} 
+      <Header 
               email={data.site.siteMetadata.email} 
               telephone={data.site.siteMetadata.telephone}
       />
-        <main siteTitle={data.site.siteMetadata.title}>{children}</main>
+        <main >{children}</main>
         <footer style={{display: 'flex', flexWrap: 'wrap',justifyContent: 'center', backgroundColor: 'rgb(94, 185, 180)', color: 'white', padding: '10px'}}>
             <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
               <div style={{fontSize: '2rem', color: 'white'}}>{data.site.siteMetadata.title}</div> 
@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
               <FaRegCopyright />
               {' '}{new Date().getFullYear()}
               {' '}
-              <a style={{color: 'white', textDecoration: 'none'}} href={data.site.siteMetadata.author.website}>{data.site.siteMetadata.author.name}</a>
+              <a style={{color: 'white', textDecoration: 'none'}} href='www.reroot.be'>{data.site.siteMetadata.author.name}</a>
             </div>
             </footer>
     </>
