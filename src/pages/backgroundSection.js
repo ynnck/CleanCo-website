@@ -11,7 +11,7 @@ const BackgroundSection = ({ className }) => (
       query {
         desktop: file(relativePath: { eq: "achtergrond_appelblauw_mirror.jpeg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1920) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
