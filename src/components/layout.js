@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
               <FaRegCopyright />
               {' '}{new Date().getFullYear()}
               {' '}
-              <a style={{color: 'white', textDecoration: 'none'}} href='www.reroot.be'>{data.site.siteMetadata.author.name}</a>
+              <a style={{color: 'white', textDecoration: 'none'}} href='https://www.reroot.be' rel="noopener norefferer">{data.site.siteMetadata.author.name}</a>
             </div>
             </footer>
     </>
