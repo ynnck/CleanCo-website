@@ -9,7 +9,8 @@ const Header = ({ telephone, email }) => (
   <div style={{display: 'flex', flexDirection: 'column'}}>
     <div style={{display: 'flex',
                  alignItems: 'center',
-                 marginRight: '2vw'}}>
+                 marginRight: '2vw', 
+                 marginBottom: '15px'}}>
         <FaPhone style={{marginRight: '10px', fontSize: '1.5rem'}}/>
         {telephone}
     </div>

@@ -11,6 +11,8 @@ header {
     height: 25vh;
     z-index: 1;
     color: white;
+    margin-bottom: 50px;
+
 }
 .containerPaginaWit{
     display: flex;
@@ -21,7 +23,7 @@ header {
     color: white; 
     background-color: rgb(94, 185, 180); 
     text-Align: justify;   
-    padding-top: 25vh;
+    padding-top: 30vh;
     padding-left: 5vh;
     padding-right: 5vh;
 }
